@@ -33,6 +33,7 @@ class [[eosio::contract("boilerplate")]] boilerplate : public contract {
          uint64_t primary_key() const { return user.value; }
       };
 
+      // Singletons & Multi-indexes
       typedef eosio::singleton<"config"_n, config_row> config_table;
       typedef eosio::multi_index<"user"_n, user_row> user_table;
 
